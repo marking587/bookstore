@@ -26,7 +26,6 @@ $x->startDocument('1.0','UTF-8');
 $x->startElement('buecher');
 
 foreach ($books as $book) {
-
     $x->startElement('book');
 
     $x->writeAttribute('ProductID',$book['ProductID']);

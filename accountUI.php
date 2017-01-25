@@ -51,7 +51,7 @@
                 <li><a href="#">Products</a></li>
                 <li><a href="#">Angular</a></li>
                 <li><a href="#">NodeJS</a></li>
-                <li><a href="#">WordPress</a></li>
+                <li><a href="http://141.56.131.108/ewa/g10/wordpress">WordPress</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
                 <li><a href="loginUI.php"><span class="glyphicon glyphicon-user"></span> Your Account</a></li>

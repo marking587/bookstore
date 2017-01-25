@@ -120,7 +120,7 @@ Product Card Styles
                 <li><a href="#">Products</a></li>
                 <li><a href="#">Angular</a></li>
                 <li><a href="#">NodeJS</a></li>
-                <li><a href="#">WordPress</a></li>
+                <li><a href="http://141.56.131.108/ewa/g10/wordpress">WordPress</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
                 <li><a href="loginUI.php"><span class="glyphicon glyphicon-user"></span> Your Account</a></li>
@@ -133,12 +133,14 @@ Product Card Styles
 <div class="container">
 
 <?php
+//$bookname = $books[0]['Produkttitel'];
+//echo "lalala $bookname";
 
-//var_dump($xml);
-echo "lalalalalal".$xml["book"][0]["@attributes"]["ProductID"];
-
-$bookname = $xml->book[1];
-echo "{$bookname['Producttitle']}";
+foreach ($books as $book){
+    if(inval($book['ProductID']) === $productID){
+        var_dump($book);
+    }
+}
 
 ?>
     <div class="row">
