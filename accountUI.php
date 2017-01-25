@@ -1,3 +1,11 @@
+<?php
+session_start();
+if(isset($_SESSION['user_session_id'])=="")
+{
+    header("Location: loginUI.php");
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>

@@ -1,3 +1,11 @@
+<?php
+session_start();
+if(isset($_SESSION['user_session_id'])!="")
+{
+    header("Location: accountUI.php");
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -241,10 +249,7 @@
 
 <footer class="container-fluid text-center">
     <p>by R. Kestel & M.S. Däbritz</p>
-    <!--    <form class="form-inline">Get deals:-->
-    <!--        <input type="email" class="form-control" size="50" placeholder="Email Address">-->
-    <!--        <button type="button" class="btn btn-danger">Sign Up</button>-->
-    <!--    </form>-->
+
 </footer>
 
 </body>

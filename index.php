@@ -57,7 +57,7 @@ include_once "api/books.php";
                 <li><a href="http://141.56.131.108/ewa/g10/wordpress">WordPress</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
-                <li><a href="loginUI.php"><span class="glyphicon glyphicon-user"></span> Your Account</a></li>
+                <li><a href="accountUI.php"><span class="glyphicon glyphicon-user"></span> Your Account</a></li>
                 <li><a href="cartUI.php"><span class="glyphicon glyphicon-shopping-cart"></span> Cart</a></li>
             </ul>
         </div>
