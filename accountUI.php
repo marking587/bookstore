@@ -1,6 +1,6 @@
 <?php
 session_start();
-if(isset($_SESSION['user_session_id'])=="")
+if(isset($_SESSION['userid'])=="")
 {
     header("Location: loginUI.php");
 }
@@ -120,7 +120,7 @@ if(isset($_SESSION['user_session_id'])=="")
                             </table>
 
                             <a href="#" class="btn btn-primary">Edit</a>
-                            <a href="#" class="btn btn-primary">Logout</a>
+                            <a href="api/login.php?action=logout" class="btn btn-primary">Logout</a>
                         </div>
                     </div>
                 </div>
