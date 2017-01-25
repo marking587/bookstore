@@ -70,7 +70,7 @@ include_once "api/books.php";
         foreach ($xml->book as $book){
             echo '<div class="col-sm-4"><div class="panel panel-primary">';
             echo '<div class="panel-heading">' . $book['Produkttitel'] . '</div>';
-            echo '<div class="panel-body"><a href="bookUI.php"><img src="'. $book['LinkGrafikdatei'] .'" class="img-responsive" style="width:100%" alt="Image"></a></div>';
+            echo '<div class="panel-body"><a href="bookUI.php?ProductID='.$book['ProductID'].'"><img src="'. $book['LinkGrafikdatei'] .'" class="img-responsive" style="width:100%" alt="Image"></a></div>';
             echo '<div class="panel-footer">'. $book['Kurzinhalt'] .'</div></div></div>';
         }
         ?>

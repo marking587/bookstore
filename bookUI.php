@@ -1,3 +1,9 @@
+<?php
+include_once "api/books.php";
+
+$productID = $_GET['ProductID'];
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -94,7 +100,7 @@ Product Card Styles
 <div class="jumbotron">
     <div class="container text-center">
         <h1>The Bookstore</h1>
-        <p>ich ewa. du ewa.</p>
+        <p>Produkt. Information.</p>
     </div>
 </div>
 
@@ -126,6 +132,15 @@ Product Card Styles
 
 <div class="container">
 
+<?php
+
+//var_dump($xml);
+echo "lalalalalal".$xml["book"][0]["@attributes"]["ProductID"];
+
+$bookname = $xml->book[1];
+echo "{$bookname['Producttitle']}";
+
+?>
     <div class="row">
         <div class="col-md-8">
             <div class="panel panel-default  panel--styled">
@@ -166,10 +181,6 @@ Product Card Styles
 
 <footer class="container-fluid text-center">
     <p>by R. Kestel & M.S. Däbritz</p>
-    <!--    <form class="form-inline">Get deals:-->
-    <!--        <input type="email" class="form-control" size="50" placeholder="Email Address">-->
-    <!--        <button type="button" class="btn btn-danger">Sign Up</button>-->
-    <!--    </form>-->
 </footer>
 
 </body>
