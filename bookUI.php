@@ -39,6 +39,7 @@ Product Card Styles
         .panel.panel--styled {
             background: #F4F2F3;
         }
+
         .panelTop {
             padding: 30px;
         }
@@ -47,26 +48,27 @@ Product Card Styles
             border-top: 1px solid #e7e7e7;
             padding-top: 20px;
         }
+
         .btn-add-to-cart {
             background: #FD5A5B;
             color: #fff;
         }
-        .btn.btn-add-to-cart.focus, .btn.btn-add-to-cart:focus, .btn.btn-add-to-cart:hover  {
+
+        .btn.btn-add-to-cart.focus, .btn.btn-add-to-cart:focus, .btn.btn-add-to-cart:hover {
             color: #fff;
             background: #FD7172;
             outline: none;
         }
+
         .btn-add-to-cart:active {
             background: #F9494B;
             outline: none;
         }
 
-
         span.itemPrice {
             font-size: 24px;
             color: #FA5B58;
         }
-
 
         /*----------------------
         ##star Rating Styles
@@ -76,19 +78,24 @@ Product Card Styles
             width: 100%;
             display: inline-block;
         }
+
         span.glyphicon {
             padding: 5px;
         }
+
         .glyphicon-star-empty {
             color: #9d9d9d;
         }
+
         .glyphicon-star-empty, .glyphicon-star {
             font-size: 18px;
         }
+
         .glyphicon-star {
             color: #FD4;
             transition: all .25s;
         }
+
         .glyphicon-star:hover {
             transform: rotate(-15deg) scale(1.3);
         }
@@ -112,12 +119,12 @@ Product Card Styles
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="#">G10</a>
+            <a class="navbar-brand" href="index.php">G10</a>
         </div>
         <div class="collapse navbar-collapse" id="myNavbar">
             <ul class="nav navbar-nav">
-                <li class="active"><a href="#">Home</a></li>
-                <li><a href="#">Products</a></li>
+                <li><a href="index.php">Home</a></li>
+                <li class="active"><a href="index.php">Products</a></li>
                 <li><a href="#">Angular</a></li>
                 <li><a href="#">NodeJS</a></li>
                 <li><a href="http://141.56.131.108/ewa/g10/wordpress">WordPress</a></li>
@@ -131,31 +138,22 @@ Product Card Styles
 </nav>
 
 <div class="container">
-
-<?php
-//$bookname = $books[0]['Produkttitel'];
-//echo "lalala $bookname";
-
-foreach ($books as $book){
-    if(inval($book['ProductID']) === $productID){
-        var_dump($book);
-    }
-}
-
-?>
     <div class="row">
         <div class="col-md-8">
             <div class="panel panel-default  panel--styled">
                 <div class="panel-body">
                     <div class="col-md-12 panelTop">
                         <div class="col-md-4">
-                            <img class="img-responsive" src="http://placehold.it/350x350" alt=""/>
+                            <?php
+                            foreach ($books as $book) {
+                                if (intval($book['ProductID']) === intval($productID)) {
+
+                            echo '<img class="img-responsive" src="'.$book['LinkGrafikdatei'].'" alt=""/>';
+                            ?>
                         </div>
                         <div class="col-md-8">
-                            <h2>Product Name</h2>
-                            <p>Lorem ipsum dolor sit amet, altera propriae iudicabit eos ne. Vel ut accusam tacimates,
-                                prima oratio ius ea. Et duo alii verterem principes, te quo putent melius fabulas, ei
-                                scripta eligendi appareat duo.</p>
+                            <h2><?php echo $book['Produkttitel'] ?></h2>
+                            <p><?php echo $book['Kurzinhalt'] ?></p>
                         </div>
                     </div>
 
@@ -166,7 +164,7 @@ foreach ($books as $book){
                             </button>
                         </div>
                         <div class="col-md-4 text-left">
-                            <h5>Price <span class="itemPrice">$24.99</span></h5>
+                            <h5>Price <span class="itemPrice"><?php echo $book['PreisBrutto'] ?> €</span></h5>
                         </div>
                         <div class="col-md-4">
                             <div class="stars">
@@ -178,7 +176,10 @@ foreach ($books as $book){
             </div>
         </div>
     </div>
-
+<?php
+}
+}
+?>
 </div>
 
 <footer class="container-fluid text-center">

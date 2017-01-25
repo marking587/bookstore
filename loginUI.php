@@ -144,19 +144,19 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="#">G10</a>
+            <a class="navbar-brand" href="index.php">G10</a>
         </div>
         <div class="collapse navbar-collapse" id="myNavbar">
             <ul class="nav navbar-nav">
-                <li class="active"><a href="#">Home</a></li>
-                <li><a href="#">Products</a></li>
+                <li><a href="index.php">Home</a></li>
+                <li><a href="index.php">Products</a></li>
                 <li><a href="#">Angular</a></li>
                 <li><a href="#">NodeJS</a></li>
                 <li><a href="http://141.56.131.108/ewa/g10/wordpress">WordPress</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
                 <li><a href="loginUI.php"><span class="glyphicon glyphicon-user"></span> Your Account</a></li>
-                <li><a href="cartUI.php"><span class="glyphicon glyphicon-shopping-cart"></span> Cart</a></li>
+                <li  class="active"><a href="cartUI.php"><span class="glyphicon glyphicon-shopping-cart"></span> Cart</a></li>
             </ul>
         </div>
     </div>

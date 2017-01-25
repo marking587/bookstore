@@ -46,12 +46,12 @@ include_once "api/books.php";
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="#">G10</a>
+            <a class="navbar-brand" href="index.php">G10</a>
         </div>
         <div class="collapse navbar-collapse" id="myNavbar">
             <ul class="nav navbar-nav">
-                <li class="active"><a href="#">Home</a></li>
-                <li><a href="#">Products</a></li>
+                <li class="active"><a href="index.php">Home</a></li>
+                <li><a href="index.php">Products</a></li>
                 <li><a href="#">Angular</a></li>
                 <li><a href="#">NodeJS</a></li>
                 <li><a href="http://141.56.131.108/ewa/g10/wordpress">WordPress</a></li>
@@ -71,7 +71,7 @@ include_once "api/books.php";
             echo '<div class="col-sm-4"><div class="panel panel-primary">';
             echo '<div class="panel-heading">' . $book['Produkttitel'] . '</div>';
             echo '<div class="panel-body"><a href="bookUI.php?ProductID='.$book['ProductID'].'"><img src="'. $book['LinkGrafikdatei'] .'" class="img-responsive" style="width:100%" alt="Image"></a></div>';
-            echo '<div class="panel-footer">'. $book['Kurzinhalt'] .'</div></div></div>';
+            echo '<div class="panel-footer">'. $book['PreisBrutto'] .'</div></div></div>';
         }
         ?>
     </div>
