@@ -1,3 +1,6 @@
+<?php
+include_once "api/books.php";
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -63,28 +66,14 @@
 
 <div class="container">
     <div class="row">
-<!--   TODO:     Hier müssen Bücher aus Datenbank geladen werden-->
-        <div class="col-sm-4">
-            <div class="panel panel-primary">
-                <div class="panel-heading">BLACK FRIDAY DEAL</div>
-                <div class="panel-body"><a href="bookUI.php"><img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image"></a></div>
-                <div class="panel-footer">Buy 50 mobiles and get a gift card</div>
-            </div>
-        </div>
-        <div class="col-sm-4">
-            <div class="panel panel-danger">
-                <div class="panel-heading">BLACK FRIDAY DEAL</div>
-                <div class="panel-body"><img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image"></div>
-                <div class="panel-footer">Buy 50 mobiles and get a gift card</div>
-            </div>
-        </div>
-        <div class="col-sm-4">
-            <div class="panel panel-success">
-                <div class="panel-heading">BLACK FRIDAY DEAL</div>
-                <div class="panel-body"><img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image"></div>
-                <div class="panel-footer">Buy 50 mobiles and get a gift card</div>
-            </div>
-        </div>
+        <?php
+        foreach ($xml->book as $book){
+            echo '<div class="col-sm-4"><div class="panel panel-primary">';
+            echo '<div class="panel-heading">' . $book['Produkttitel'] . '</div>';
+            echo '<div class="panel-body"><a href="bookUI.php"><img src="'. $book['LinkGrafikdatei'] .'" class="img-responsive" style="width:100%" alt="Image"></a></div>';
+            echo '<div class="panel-footer">'. $book['Kurzinhalt'] .'</div></div></div>';
+        }
+        ?>
     </div>
 </div><br>
 
