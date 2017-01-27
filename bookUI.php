@@ -1,8 +1,11 @@
 <?php
+session_start();
 include_once "api/books.php";
-
+if(isset($_SESSION['userid'])!=""){
+ $logged = 1;
+}
+session_start();
 $productID = $_GET['ProductID'];
-
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -159,9 +162,20 @@ Product Card Styles
 
                     <div class="col-md-12 panelBottom">
                         <div class="col-md-4 text-center">
-                            <button class="btn btn-lg btn-add-to-cart"><span
-                                    class="glyphicon glyphicon-shopping-cart"></span> Add to Cart
-                            </button>
+                            <?php if($logged == 1) {?>
+                            <form action="api/addToCart.php" method="post">
+                               <button type="submit" class="btn btn-lg btn-add-to-cart"><span
+                                       class="glyphicon glyphicon-shopping-cart"></span> Add to Cart
+                               </button>
+                               <input type="hidden" name="cartItemAdded" id="cartItemAdded" value='<?php echo $productID; ?>'>
+                           </form>
+                            <?php } else { ?>
+                                <a href="loginUI.php"><button type="submit" class="btn btn-lg btn-add-to-cart"><span
+                                            class="glyphicon glyphicon-shopping-cart"></span> Log in!
+                                    </button></a>
+
+                            <?php } ?>
+
                         </div>
                         <div class="col-md-4 text-left">
                             <h5>Price <span class="itemPrice"><?php echo $book['PreisBrutto'] ?> €</span></h5>
