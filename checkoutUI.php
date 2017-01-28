@@ -118,6 +118,7 @@ if (isset($_SESSION['userid']) == "") {
                                                                     <li><?php echo $book['Produktcode']; ?></li>
                                                                     <li><?php echo $book['Autorname']; ?></li>
                                                                     <li><?php echo $book['Verlagsname']; ?></li>
+<!--                                                                    <li>TODO: Menge einfügen</li>-->
                                                                 </ul>
                                                             </td>
                                                             <td>
