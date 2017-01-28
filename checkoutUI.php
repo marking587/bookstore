@@ -1,7 +1,7 @@
 <?php
 session_start();
-if(isset($_SESSION['userid'])=="")
-{
+include_once "api/books.php";
+if (isset($_SESSION['userid']) == "") {
     header("Location: loginUI.php");
 }
 ?>
@@ -61,7 +61,8 @@ if(isset($_SESSION['userid'])=="")
                 <li><a href="http://141.56.131.108/ewa/g10/wordpress">WordPress</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
-                <li class="active"><a href="loginUI.php"><span class="glyphicon glyphicon-user"></span> Your Account</a></li>
+                <li class="active"><a href="loginUI.php"><span class="glyphicon glyphicon-user"></span> Your Account</a>
+                </li>
                 <li><a href="cartUI.php"><span class="glyphicon glyphicon-shopping-cart"></span> Cart</a></li>
             </ul>
         </div>
@@ -93,25 +94,63 @@ if(isset($_SESSION['userid'])=="")
                                         <div class="panel-body">
                                             <div class="items">
                                                 <div class="col-md-9">
+                                                    <?php
+                                                    if (is_array($_SESSION['cart'])) {
+                                                    foreach ($_SESSION['cart'] as $arr => $bla) {
+                                                    foreach ($books as $book) {
+                                                    if (intval($book['ProductID']) === intval($arr)) {
+
+                                                    ?>
                                                     <table class="table table-striped">
+                                                        <!--                                                        //Item 1-->
                                                         <tr>
                                                             <td colspan="2">
+                                                                <!--                                                                TODO: entfernen des Artikels-->
                                                                 <a class="btn btn-warning btn-sm pull-right"
                                                                    href="http://www.startajobboard.com/"
                                                                    title="Remove Item">X</a>
                                                                 <b>
-                                                                    Premium Posting</b></td>
+                                                                    <?php echo $book['Produkttitel']; ?></b></td>
                                                         </tr>
                                                         <tr>
                                                             <td>
                                                                 <ul>
-                                                                    <li>One Job Posting Credit</li>
-                                                                    <li>Job Distribution*</li>
-                                                                    <li>Social Media Distribution</li>
+                                                                    <li><?php echo $book['Produktcode']; ?></li>
+                                                                    <li><?php echo $book['Autorname']; ?></li>
+                                                                    <li><?php echo $book['Verlagsname']; ?></li>
                                                                 </ul>
                                                             </td>
                                                             <td>
-                                                                <b>$147.00</b>
+                                                                <b><?php echo $book['PreisBrutto']; ?></b>
+                                                            </td>
+                                                        </tr>
+                                                        <?php
+                                                        }
+                                                        }
+                                                        }} else {
+                                                            echo '<span> Nothing to order.</span>';
+                                                        }
+                                                        ?>
+                                                        <!--                                                        //Item 2-->
+                                                        <tr>
+                                                            <td colspan="2">
+                                                                <!--                                                                TODO: entfernen des Artikels-->
+                                                                <a class="btn btn-warning btn-sm pull-right"
+                                                                   href="http://www.startajobboard.com/"
+                                                                   title="Remove Item">X</a>
+                                                                <b>
+                                                                    <?php echo $book['Produkttitel']; ?></b></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                <ul>
+                                                                    <li><?php echo $book['Produktcode']; ?></li>
+                                                                    <li><?php echo $book['Autorname']; ?></li>
+                                                                    <li><?php echo $book['Verlagsname']; ?></li>
+                                                                </ul>
+                                                            </td>
+                                                            <td>
+                                                                <b><?php echo $book['PreisBrutto']; ?></b>
                                                             </td>
                                                         </tr>
                                                     </table>

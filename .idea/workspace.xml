@@ -2,10 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4f858d72-0efe-4871-ac18-ddb6f410ae8c" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/api/addToCart.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookUI.php" afterPath="$PROJECT_DIR$/bookUI.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cartUI.php" afterPath="$PROJECT_DIR$/cartUI.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/checkoutUI.php" afterPath="$PROJECT_DIR$/checkoutUI.php" />
     </list>
     <ignored path="bookstore.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -40,8 +38,8 @@
       <file leaf-file-name="books.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/api/books.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="26" column="0" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
+            <state relative-caret-position="270">
+              <caret line="40" column="45" selection-start-line="40" selection-start-column="45" selection-end-line="40" selection-end-column="45" />
               <folding>
                 <marker date="1485357302000" expanded="true" signature="296:317" ph="SELECT * FRO... buecher" />
               </folding>
@@ -61,11 +59,25 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="checkoutUI.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/checkoutUI.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="180">
+              <caret line="31" column="26" selection-start-line="31" selection-start-column="26" selection-end-line="31" selection-end-column="26" />
+              <folding>
+                <element signature="n#nav#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+                <element signature="n#tr#2;n#table#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#form#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
+                <element signature="n#tr#3;n#table#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#form#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="bookUI.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/bookUI.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="302">
-              <caret line="183" column="47" selection-start-line="183" selection-start-column="47" selection-end-line="183" selection-end-column="47" />
+            <state relative-caret-position="165">
+              <caret line="148" column="46" selection-start-line="148" selection-start-column="46" selection-end-line="148" selection-end-column="46" />
               <folding>
                 <marker date="1485554623000" expanded="true" signature="672:701" ph="..." />
                 <marker date="1485554623000" expanded="true" signature="5944:6024" ph="..." />
@@ -74,11 +86,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="cartUI.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="cartUI.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/cartUI.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="118" column="42" selection-start-line="118" selection-start-column="42" selection-end-line="118" selection-end-column="42" />
+            <state relative-caret-position="1455">
+              <caret line="97" column="40" selection-start-line="97" selection-start-column="40" selection-end-line="97" selection-end-column="40" />
               <folding>
                 <element signature="n#div#1;n#div#1;n#div#0;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
               </folding>
@@ -122,11 +134,11 @@
         <option value="$PROJECT_DIR$/api/credentials.php" />
         <option value="$PROJECT_DIR$/api/login.php" />
         <option value="$PROJECT_DIR$/loginUI.php" />
-        <option value="$PROJECT_DIR$/checkoutUI.php" />
         <option value="$PROJECT_DIR$/accountUI.php" />
         <option value="$PROJECT_DIR$/api/addToCart.php" />
         <option value="$PROJECT_DIR$/bookUI.php" />
         <option value="$PROJECT_DIR$/cartUI.php" />
+        <option value="$PROJECT_DIR$/checkoutUI.php" />
       </list>
     </option>
   </component>
@@ -675,7 +687,7 @@
       <workItem from="1485337797368" duration="6447000" />
       <workItem from="1485352134556" duration="13745000" />
       <workItem from="1485428957697" duration="407000" />
-      <workItem from="1485452494462" duration="5124000" />
+      <workItem from="1485452494462" duration="7051000" />
     </task>
     <task id="LOCAL-00001" summary="added db connection (books.php) and showing books from db in index.php">
       <created>1485354955005</created>
@@ -719,11 +731,18 @@
       <option name="project" value="LOCAL" />
       <updated>1485381098763</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="added cart function, not final /1">
+      <created>1485555960656</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1485555960656</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="25827000" />
+    <option name="totallyTimeSpent" value="27754000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -810,7 +829,8 @@
     <MESSAGE value="bookdetail /3 + navigation links added" />
     <MESSAGE value="session managment /1" />
     <MESSAGE value="session managment /2 + login and logout" />
-    <option name="LAST_COMMIT_MESSAGE" value="session managment /2 + login and logout" />
+    <MESSAGE value="added cart function, not final /1" />
+    <option name="LAST_COMMIT_MESSAGE" value="added cart function, not final /1" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -924,14 +944,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/checkoutUI.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="36" selection-start-line="4" selection-start-column="36" selection-end-line="4" selection-end-column="36" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/loginUI.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="45">
@@ -984,10 +996,20 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/api/books.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="40" column="45" selection-start-line="40" selection-start-column="45" selection-end-line="40" selection-end-column="45" />
+          <folding>
+            <marker date="1485357302000" expanded="true" signature="296:317" ph="SELECT * FRO... buecher" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/bookUI.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="302">
-          <caret line="183" column="47" selection-start-line="183" selection-start-column="47" selection-end-line="183" selection-end-column="47" />
+        <state relative-caret-position="165">
+          <caret line="148" column="46" selection-start-line="148" selection-start-column="46" selection-end-line="148" selection-end-column="46" />
           <folding>
             <marker date="1485554623000" expanded="true" signature="672:701" ph="..." />
             <marker date="1485554623000" expanded="true" signature="5944:6024" ph="..." />
@@ -995,22 +1017,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/api/books.php">
+    <entry file="file://$PROJECT_DIR$/cartUI.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="26" column="0" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
+        <state relative-caret-position="1455">
+          <caret line="97" column="40" selection-start-line="97" selection-start-column="40" selection-end-line="97" selection-end-column="40" />
           <folding>
-            <marker date="1485357302000" expanded="true" signature="296:317" ph="SELECT * FRO... buecher" />
+            <element signature="n#div#1;n#div#1;n#div#0;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/cartUI.php">
+    <entry file="file://$PROJECT_DIR$/checkoutUI.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="118" column="42" selection-start-line="118" selection-start-column="42" selection-end-line="118" selection-end-column="42" />
+        <state relative-caret-position="180">
+          <caret line="31" column="26" selection-start-line="31" selection-start-column="26" selection-end-line="31" selection-end-column="26" />
           <folding>
-            <element signature="n#div#1;n#div#1;n#div#0;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#nav#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#tr#2;n#table#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#form#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#tr#3;n#table#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#form#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
           </folding>
         </state>
       </provider>
