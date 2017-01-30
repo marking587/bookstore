@@ -1,46 +1,33 @@
 <?php
-if (session_status() ===  PHP_SESSION_NONE)  {
-    session_start();
-}
-
-if (isset($_GET['action']) && $_GET['action'] == 'logout') {
-    session_start();
-    session_unset();
-    session_destroy();
-    header('location: ../index.php');
-}
-
+session_start();
+include_once  "credentials.php";
 
 if (isset($_POST['login-submit'])) {
 
-    $inputUsername = $_POST['username'];
-    $passwordMD5 = md5($_POST['password']);
+    $inputUsername =  trim($_POST['username']);
+    $passwordMD5 = md5(trim($_POST['password']));
 
-    include "credentials.php";
-    try {
-        $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
-        $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-
-        $sql = "SELECT `user`.`userid`, `user`.`username`, `user`.`userpwmd5`, `user`.`useranrede`, `user`.`useradresse`
-                          FROM `$dbname`.`user` 
-                          WHERE `user`.`username` = '$inputUsername' AND `user`.`userpwmd5` = '$passwordMD5';";
-
-        $userData = $conn->query($sql);
-        $userData = $userData->fetch(PDO::FETCH_ASSOC);
+        $sql = "SELECT userid, username, useranrede, useradresse
+                          FROM user 
+                          WHERE username = '$inputUsername' AND userpwmd5 = '$passwordMD5' ";
+            $result = mysqli_query($conn, $sql);
+            $userData = mysqli_fetch_row($result);
+            $count = mysqli_num_rows($result);
 
 
-        $_SESSION['userid'] = $userData['userid'];
-        $_SESSION['username'] = $userData['username'];
-        $_SESSION['useranrede'] = $userData['useranrede'];
+        if($count == 1){
+            $_SESSION['userid'] = $userData[0];
+            $_SESSION['username'] = $userData[1];
+
+            $_SESSION['useranrede'] = $userData[2];
+            $_SESSION['useradresse'] = $userData[3];
+            echo "ok";
 
 
-        header('location: ../accountUI.php');
-
-
-    } catch (PDOException $e) {
-        header('location: ../index.php');
-    }
-
-    $conn = null;
+        } else
+        {
+            echo "FICK DICH!! Du kommst hier nicht rein!";
+        }
 
 }
+?>

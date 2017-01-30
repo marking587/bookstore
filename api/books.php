@@ -7,13 +7,9 @@
  */
 
 // setting up PDO
-$dbLocation = 'mysql:dbname=g10;host=localhost';
-$dbUser = "root";
-$dbPW = "MyNewPass";
-$db = new PDO($dbLocation, $dbUser, $dbPW);
 
 // prepare all queries...
-$dbBuecher = $db->prepare("SELECT * FROM buecher");
+$dbBuecher = $conn->prepare("SELECT * FROM buecher");
 
 // fetch all artists
 $dbBuecher->execute();
