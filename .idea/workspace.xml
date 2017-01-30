@@ -1,16 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="4f858d72-0efe-4871-ac18-ddb6f410ae8c" name="Default" comment="new UI">
+    <list default="true" id="4f858d72-0efe-4871-ac18-ddb6f410ae8c" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/api/register.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/api/addToCart.php" afterPath="$PROJECT_DIR$/api/addToCart.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/api/login.php" afterPath="$PROJECT_DIR$/api/login.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookUI.php" afterPath="$PROJECT_DIR$/bookUI.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cartUI.php" afterPath="$PROJECT_DIR$/cartUI.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/checkoutUI.php" afterPath="$PROJECT_DIR$/checkoutUI.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/login_register.js" afterPath="$PROJECT_DIR$/js/login_register.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/validation.min.js" afterPath="$PROJECT_DIR$/js/validation.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/loginUI.php" afterPath="$PROJECT_DIR$/loginUI.php" />
     </list>
     <ignored path="bookstore.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -70,7 +65,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="bookUI.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="bookUI.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/bookUI.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="420">
@@ -117,14 +112,14 @@
       <file leaf-file-name="login_register.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/login_register.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="222">
-              <caret line="52" column="0" lean-forward="false" selection-start-line="52" selection-start-column="0" selection-end-line="52" selection-end-column="0" />
+            <state relative-caret-position="327">
+              <caret line="76" column="79" lean-forward="false" selection-start-line="76" selection-start-column="79" selection-end-line="76" selection-end-column="79" />
               <folding>
                 <element signature="e#0#47#0" expanded="false" />
-                <marker date="1485792006000" expanded="true" signature="1074:1080" ph=" " />
-                <marker date="1485792006000" expanded="true" signature="1486:1492" ph=" " />
-                <marker date="1485792006000" expanded="true" signature="2741:2747" ph=" " />
-                <marker date="1485792006000" expanded="true" signature="3188:3194" ph=" " />
+                <marker date="1485793164000" expanded="true" signature="1074:1080" ph=" " />
+                <marker date="1485793164000" expanded="true" signature="1486:1492" ph=" " />
+                <marker date="1485793164000" expanded="true" signature="2741:2747" ph=" " />
+                <marker date="1485793164000" expanded="true" signature="3186:3192" ph=" " />
               </folding>
             </state>
           </provider>
@@ -133,8 +128,8 @@
       <file leaf-file-name="login.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/api/login.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="495">
-              <caret line="33" column="2" lean-forward="true" selection-start-line="33" selection-start-column="2" selection-end-line="33" selection-end-column="2" />
+            <state relative-caret-position="165">
+              <caret line="11" column="93" lean-forward="true" selection-start-line="9" selection-start-column="8" selection-end-line="11" selection-end-column="93" />
               <folding>
                 <marker date="1485783908000" expanded="true" signature="210:386" ph="SELECT useri... user" />
               </folding>
@@ -142,15 +137,16 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="register.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="register.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/api/register.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="345">
-              <caret line="23" column="18" lean-forward="false" selection-start-line="23" selection-start-column="18" selection-end-line="23" selection-end-column="18" />
+            <state relative-caret-position="285">
+              <caret line="19" column="0" lean-forward="true" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
               <folding>
                 <element signature="e#6#92#0#PHP" expanded="true" />
-                <marker date="1485792579000" expanded="true" signature="442:556" ph="INSERT INTO user... " />
-                <marker date="1485792579000" expanded="true" signature="448:556" ph="SELECT useri... user" />
+                <marker date="1485793308000" expanded="true" signature="448:473" ph="SELECT usern... user" />
+                <marker date="1485793308000" expanded="true" signature="525:639" ph="INSERT INTO user... " />
+                <marker date="1485793308000" expanded="true" signature="531:639" ph="SELECT useri... user" />
               </folding>
             </state>
           </provider>
@@ -227,9 +223,9 @@
         <option value="$PROJECT_DIR$/css/style.css" />
         <option value="$PROJECT_DIR$/cartUI.php" />
         <option value="$PROJECT_DIR$/loginUI.php" />
+        <option value="$PROJECT_DIR$/bookUI.php" />
         <option value="$PROJECT_DIR$/js/login_register.js" />
         <option value="$PROJECT_DIR$/api/register.php" />
-        <option value="$PROJECT_DIR$/bookUI.php" />
       </list>
     </option>
   </component>
@@ -421,7 +417,7 @@
       <workItem from="1485715460479" duration="7469000" />
       <workItem from="1485729174641" duration="265000" />
       <workItem from="1485730876461" duration="4441000" />
-      <workItem from="1485767472068" duration="17193000" />
+      <workItem from="1485767472068" duration="17613000" />
     </task>
     <task id="LOCAL-00001" summary="added db connection (books.php) and showing books from db in index.php">
       <created>1485354955005</created>
@@ -493,11 +489,18 @@
       <option name="project" value="LOCAL" />
       <updated>1485771392691</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="new UI">
+      <created>1485792965433</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1485792965433</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="91139000" />
+    <option name="totallyTimeSpent" value="91559000" />
   </component>
   <component name="TodoView" selected-index="1">
     <todo-panel id="selected-file">
@@ -598,7 +601,14 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="5" />
+      <breakpoints>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/api/register.php</url>
+          <line>22</line>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+      </breakpoints>
+      <option name="time" value="6" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -917,16 +927,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/loginUI.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="68" column="146" lean-forward="false" selection-start-line="68" selection-start-column="146" selection-end-line="68" selection-end-column="146" />
-          <folding>
-            <element signature="n#style#0;n#form#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/api/books.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="312">
@@ -942,42 +942,6 @@
         <state relative-caret-position="165">
           <caret line="11" column="37" lean-forward="true" selection-start-line="11" selection-start-column="4" selection-end-line="11" selection-end-column="37" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/login_register.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="222">
-          <caret line="52" column="0" lean-forward="false" selection-start-line="52" selection-start-column="0" selection-end-line="52" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#47#0" expanded="false" />
-            <marker date="1485792006000" expanded="true" signature="1074:1080" ph=" " />
-            <marker date="1485792006000" expanded="true" signature="1486:1492" ph=" " />
-            <marker date="1485792006000" expanded="true" signature="2741:2747" ph=" " />
-            <marker date="1485792006000" expanded="true" signature="3188:3194" ph=" " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/api/login.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="495">
-          <caret line="33" column="2" lean-forward="true" selection-start-line="33" selection-start-column="2" selection-end-line="33" selection-end-column="2" />
-          <folding>
-            <marker date="1485783908000" expanded="true" signature="210:386" ph="SELECT useri... user" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/api/register.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="23" column="18" lean-forward="false" selection-start-line="23" selection-start-column="18" selection-end-line="23" selection-end-column="18" />
-          <folding>
-            <element signature="e#6#92#0#PHP" expanded="true" />
-            <marker date="1485792579000" expanded="true" signature="442:556" ph="INSERT INTO user... " />
-            <marker date="1485792579000" expanded="true" signature="448:556" ph="SELECT useri... user" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1012,6 +976,53 @@
         <state relative-caret-position="420">
           <caret line="28" column="126" lean-forward="false" selection-start-line="28" selection-start-column="126" selection-end-line="28" selection-end-column="126" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/loginUI.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="68" column="146" lean-forward="false" selection-start-line="68" selection-start-column="146" selection-end-line="68" selection-end-column="146" />
+          <folding>
+            <element signature="n#style#0;n#form#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/login_register.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="327">
+          <caret line="76" column="79" lean-forward="false" selection-start-line="76" selection-start-column="79" selection-end-line="76" selection-end-column="79" />
+          <folding>
+            <element signature="e#0#47#0" expanded="false" />
+            <marker date="1485793164000" expanded="true" signature="1074:1080" ph=" " />
+            <marker date="1485793164000" expanded="true" signature="1486:1492" ph=" " />
+            <marker date="1485793164000" expanded="true" signature="2741:2747" ph=" " />
+            <marker date="1485793164000" expanded="true" signature="3186:3192" ph=" " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/login.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="93" lean-forward="true" selection-start-line="9" selection-start-column="8" selection-end-line="11" selection-end-column="93" />
+          <folding>
+            <marker date="1485783908000" expanded="true" signature="210:386" ph="SELECT useri... user" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/register.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="19" column="0" lean-forward="true" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+          <folding>
+            <element signature="e#6#92#0#PHP" expanded="true" />
+            <marker date="1485793308000" expanded="true" signature="448:473" ph="SELECT usern... user" />
+            <marker date="1485793308000" expanded="true" signature="525:639" ph="INSERT INTO user... " />
+            <marker date="1485793308000" expanded="true" signature="531:639" ph="SELECT useri... user" />
+          </folding>
         </state>
       </provider>
     </entry>
