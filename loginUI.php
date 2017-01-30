@@ -66,6 +66,9 @@
                                     <input type="password" name="confirm-password" id="confirm-password" tabindex="2" class="form-control" placeholder="Confirm Password">
                                 </div>
                                 <div class="form-group">
+                                    <input type="adress" name="user_adress" id="user_adress" tabindex="3" class="form-control" placeholder="Adress">
+                                </div>
+                                <div class="form-group">
                                     <div class="row">
                                         <div class="col-sm-6 col-sm-offset-3">
                                             <input type="submit" name="register-submit" id="register-submit" tabindex="4" class="form-control btn btn-register" value="Register Now">

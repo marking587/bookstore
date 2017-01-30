@@ -13,6 +13,7 @@ if (isset($_POST['login-submit'])) {
             $result = mysqli_query($conn, $sql);
             $userData = mysqli_fetch_row($result);
             $count = mysqli_num_rows($result);
+            $_SESSION['cart'] = [];
 
 
         if($count == 1){

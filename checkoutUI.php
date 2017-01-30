@@ -7,7 +7,7 @@
                         Review Your Order & Complete Checkout
                     </h2>
                     <hr/>
-                    <a href="#" class="btn btn-info" style="width: 100%;">Add More Products & Services</a>
+                    <a href="./index.php" class="btn btn-info" style="width: 100%;">Add More Products</a>
                     <hr/>
                     <div class="shopping_cart">
                         <form class="form-horizontal" role="form" action="" method="post" id="payment-form">
@@ -34,9 +34,9 @@
                                                         <!--                                                        //Item 1-->
                                                         <tr>
                                                             <td colspan="2">
-                                                                <!--                                                                TODO: entfernen des Artikels-->
+                                                                <!--               TODO: entfernen des Artikels-->
                                                                 <a class="btn btn-warning btn-sm pull-right"
-                                                                   href="http://www.startajobboard.com/"
+                                                                   href=""
                                                                    title="Remove Item">X</a>
                                                                 <b>
                                                                     <?php echo $book['Produkttitel']; ?></b></td>
@@ -119,13 +119,12 @@
                                 </div>
                                 <div id="collapseTwo" class="panel-collapse collapse">
                                     <div class="panel-body">
-                                        <b>Help us keep your account safe and secure, please verify your billing
-                                            information.</b>
+                                        <b>please verify your billing information.</b>
                                         <br/><br/>
                                         <table class="table table-striped" style="font-weight: bold;">
                                             <tr>
                                                 <td style="width: 175px;">
-                                                    <label for="id_email">Best Email:</label></td>
+                                                    <label for="id_email">E-Mail:</label></td>
                                                 <td>
                                                     <input class="form-control" id="id_email" name="email"
                                                            required="required" type="text"/>

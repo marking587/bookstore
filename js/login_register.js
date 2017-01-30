@@ -50,6 +50,7 @@ $('document').ready(function () {
             password: {
                 required: true
                 , }
+
             , }
         , messages: {
             password: {
