@@ -6,7 +6,7 @@ $dbname = "g10";
 $check = false;
 
 
-$conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password, [PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES utf8"]);
-
+$conn = mysqli_connect($servername, $username, $password, $dbname);
+MYSQLI_SET_CHARSET($conn, 'utf8');
 
 ?>
