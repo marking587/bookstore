@@ -24,7 +24,8 @@
                                             <div class="items">
                                                 <div class="col-md-9">
                                                     <?php
-                                                    if (is_array($_SESSION['cart'])) {
+                                                    if (isset($_SESSION['cart']) && is_array($_SESSION['cart']) ) {
+                                                    $total = 0;
                                                     foreach ($_SESSION['cart'] as $arr => $bla) {
                                                     foreach ($books as $book) {
                                                     if (intval($book['ProductID']) === intval($arr)) {
@@ -34,10 +35,6 @@
                                                         <!--                                                        //Item 1-->
                                                         <tr>
                                                             <td colspan="2">
-                                                                <!--               TODO: entfernen des Artikels-->
-                                                                <a class="btn btn-warning btn-sm pull-right"
-                                                                   href=""
-                                                                   title="Remove Item">X</a>
                                                                 <b>
                                                                     <?php echo $book['Produkttitel']; ?></b></td>
                                                         </tr>
@@ -51,44 +48,23 @@
                                                                 </ul>
                                                             </td>
                                                             <td>
-                                                                <b><?php echo $book['PreisBrutto']; ?></b>
+                                                                <b><?php echo $arr." x ".$book['PreisBrutto']." (".$book['PreisBrutto']*$arr.")"; $total += $book['PreisBrutto']*$arr;?></b>
                                                             </td>
                                                         </tr>
                                                         <?php
                                                         }
                                                         }
                                                         }} else {
+                                                            //TODO: das muss noch angezeigt werden , siehe if Bedingung
                                                             echo '<span> Nothing to order.</span>';
                                                         }
                                                         ?>
-                                                        <!--                                                        //Item 2-->
-                                                        <tr>
-                                                            <td colspan="2">
-                                                                <!--                                                                TODO: entfernen des Artikels-->
-                                                                <a class="btn btn-warning btn-sm pull-right"
-                                                                   href="http://www.startajobboard.com/"
-                                                                   title="Remove Item">X</a>
-                                                                <b>
-                                                                    <?php echo $book['Produkttitel']; ?></b></td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>
-                                                                <ul>
-                                                                    <li><?php echo $book['Produktcode']; ?></li>
-                                                                    <li><?php echo $book['Autorname']; ?></li>
-                                                                    <li><?php echo $book['Verlagsname']; ?></li>
-                                                                </ul>
-                                                            </td>
-                                                            <td>
-                                                                <b><?php echo $book['PreisBrutto']; ?></b>
-                                                            </td>
-                                                        </tr>
                                                     </table>
                                                 </div>
                                                 <div class="col-md-3">
                                                     <div style="text-align: center;">
                                                         <h3>Order Total</h3>
-                                                        <h3><span style="color:green;">$147.00</span></h3>
+                                                        <h3><span style="color:green;"><?php echo $total?> €</span></h3>
                                                     </div>
                                                 </div>
                                             </div>
@@ -121,56 +97,58 @@
                                     <div class="panel-body">
                                         <b>please verify your billing information.</b>
                                         <br/><br/>
+                                        <form>
                                         <table class="table table-striped" style="font-weight: bold;">
                                             <tr>
                                                 <td style="width: 175px;">
-                                                    <label for="id_email">E-Mail:</label></td>
+                                                    <label for="id_email" id="emailAlert">E-Mail:</label></td>
                                                 <td>
-                                                    <input class="form-control" id="id_email" name="email"
+                                                    <input class="form-control" id="email" name="email"
                                                            required="required" type="text"/>
                                                 </td>
                                             </tr>
                                             <tr>
                                                 <td style="width: 175px;">
-                                                    <label for="id_first_name">First name:</label></td>
+                                                    <label for="id_first_name" id="firstNameAlert">First name:</label></td>
                                                 <td>
-                                                    <input class="form-control" id="id_first_name" name="first_name"
+                                                    <input class="form-control" id="firstName" name="firstName"
                                                            required="required" type="text"/>
                                                 </td>
                                             </tr>
                                             <tr>
                                                 <td style="width: 175px;">
-                                                    <label for="id_last_name">Last name:</label></td>
+                                                    <label for="id_last_name" id="lastNameAlert">Last name:</label></td>
                                                 <td>
-                                                    <input class="form-control" id="id_last_name" name="last_name"
+                                                    <input class="form-control" id="lastName" name="lastName"
                                                            required="required" type="text"/>
                                                 </td>
                                             </tr>
                                             <tr>
                                                 <td style="width: 175px;">
-                                                    <label for="id_address_line_1">Address:</label></td>
+                                                    <label for="id_address_line_1" id="streetAlert">Address:</label></td>
                                                 <td>
-                                                    <input class="form-control" id="id_address_line_1"
-                                                           name="address_line_1" required="required" type="text"/>
+                                                    <input class="form-control" id="street"
+                                                           name="street" required="required" type="text"/>
                                                 </td>
                                             </tr>
                                             <tr>
                                                 <td style="width: 175px;">
-                                                    <label for="id_city">City:</label></td>
+                                                    <label for="id_city" id="cityAlert">City:</label></td>
                                                 <td>
-                                                    <input class="form-control" id="id_city" name="city"
+                                                    <input class="form-control" id="city" name="city"
                                                            required="required" type="text"/>
                                                 </td>
                                             </tr>
                                             <tr>
                                                 <td style="width: 175px;">
-                                                    <label for="id_postalcode">Postalcode:</label></td>
+                                                    <label  for="id_postalcode" id="plzAlert">Postalcode:</label></td>
                                                 <td>
-                                                    <input class="form-control" id="id_postalcode" name="postalcode"
+                                                    <input class="form-control" id="plz" name="plz"
                                                            required="required" type="text"/>
                                                 </td>
                                             </tr>
                                         </table>
+                                            <span id="message"></span>
                                     </div>
                                 </div>
                             </div>
@@ -181,9 +159,8 @@
                                                                             data-parent="#accordion"
                                                                             href="#collapseThree"
                                                                             class=" btn   btn-success" id="payInfo"
-                                                                            style="width:100%;display: none;" onclick="$(this).fadeOut();
-                   document.getElementById('collapseThree').scrollIntoView()">Enter Payment Information »</a>
-                                        </div>
+                                                                            style="width:100%;display: none;" onclick="validation(console.error(),bill());">Enter Payment Information »</a>
+                                        </div></form>
                                     </h4>
                                 </div>
                             </div>

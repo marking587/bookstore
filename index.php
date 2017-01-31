@@ -33,6 +33,7 @@ include_once './api/books.php';
     <script src="./js/bookUI.js"></script>
     <script src="./js/loginUI.js"></script>
     <script src="./js/login_register.js"></script>
+    <script src="./js/bill.js"></script>
 
 </head>
 <body>
