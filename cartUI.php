@@ -17,11 +17,11 @@ include_once "./soa/soa.php"; //liefert lieferzeit zurück
                                 <h5><span class="glyphicon glyphicon-shopping-cart"></span> Shopping Cart</h5>
                             </div>
                             <div class="col-xs-6">
-                               <a href="./index.php">
-                                   <button  type="button" class="btn btn-primary btn-sm btn-block">
-                                     <span class="glyphicon glyphicon-share-alt"></span> Continue shopping
+                                <a href="./index.php">
+                                    <button type="button" class="btn btn-primary btn-sm btn-block">
+                                        <span class="glyphicon glyphicon-share-alt"></span> Continue shopping
 
-                                </button>
+                                    </button>
                                 </a>
                             </div>
                         </div>
@@ -32,11 +32,6 @@ include_once "./soa/soa.php"; //liefert lieferzeit zurück
                     $total = 0;
                     $price = null;
                     if (isset($_SESSION['cart']) && is_array($_SESSION['cart'])) {
-//var_dump($_SESSION['cart']);
-
-
-//var_dump($_SESSION['cart'][1]);
-//var_dump($_SESSION['amount']);
 
                         foreach ($_SESSION['cart'] as $productID => $amount) {
 
@@ -49,37 +44,52 @@ include_once "./soa/soa.php"; //liefert lieferzeit zurück
                                     ?>
 
 
-                            <div class="row">
-                                <div class="col-xs-2"><img class="img-responsive" src="<?php echo $book['LinkGrafikdatei']; ?>">
-                                </div>
-                                <div class="col-xs-4">
-                                    <h4 class="product-name"><strong><?php echo $book['Produkttitel']; ?></strong></h4><h4><small><?php echo $book['Kurzinhalt']; ?></small></h4>
-                                </div>
-                                <div class="col-xs-6">
-                                    <div class="col-xs-6 text-right">
-                                        <h6><strong><?php echo $book['PreisBrutto']; ?><span class="text-muted"> € x</span></strong></h6>
+                                    <div class="row">
+                                        <div class="col-xs-2"><img class="img-responsive"
+                                                                   src="<?php echo $book['LinkGrafikdatei']; ?>">
+                                        </div>
+                                        <div class="col-xs-4">
+                                            <h4 class="product-name">
+                                                <strong><?php echo $book['Produkttitel']; ?></strong></h4>
+                                            <h4>
+                                                <small><?php echo $book['Kurzinhalt']; ?></small>
+                                            </h4>
+                                        </div>
+                                        <div class="col-xs-6">
+                                            <div class="col-xs-6 text-right">
+                                                <h6><strong><?php echo $book['PreisBrutto']; ?><span class="text-muted"> € x</span></strong>
+                                                </h6>
 
-                                    </div>
-                                    <div class="col-xs-4">
-                                        <input id="amount_value" type="text" class="form-control input-sm" value="<?php echo $amount ?>">
-                                    </div>
-                                    <div class="col-xs-2">
-<!--                                        TODO: remove items-->
-                                        <button type="button" class="btn btn-link btn-xs">
-                                            <span class="glyphicon glyphicon-trash"> </span>
-                                        </button>
-                                    </div>
+                                            </div>
+                                            <div class="col-xs-4">
+                                                <span> x <?php echo $amount ?></span>
+                                            </div>
+                                            <div class="col-xs-2">
+                                                <!--                                        TODO: remove items-->
+                                                <form method="post"
+                                                      action="api/removeFromCart.php">
+                                                    <button type="submit" class="btn btn-link btn-xs">
+                                                        <span class="glyphicon glyphicon-trash"> </span>
+                                                    </button>
+                                                    <input type="hidden" name="cartItemRemoved" id="cartItemRemoved" value='<?php echo $productID; ?>'>
+                                                </form>
 
+                                            </div>
+
+                                        </div>
+                                        <div>
+                                            <h6 class="text-right"><strong>Gesamt: <?php echo $price; ?> € </strong>
+                                            </h6>
+                                            <h6 class="text-right"><strong>erwartete
+                                                    Lieferzeit: <?= GetDeliveryTime($isbn); ?> Tage </strong></h6>
+                                        </div>
                                     </div>
-                                <div >
-                                    <h6 class="text-right" ><strong>Gesamt: <?php echo $price; ?> € </strong></h6>
-                                    <h6 class="text-right"><strong>erwartete Lieferzeit: <?= GetDeliveryTime($isbn); ?> Tage </strong></h6>
-                                </div>
-                            </div>
-                            <hr>
-                           <?php
-                        }}}
-                    }else{
+                                    <hr>
+                                    <?php
+                                }
+                            }
+                        }
+                    } else {
                         echo "Ihr Einkaufswagen ist leer.";
                     }
                     ?>
@@ -106,7 +116,7 @@ include_once "./soa/soa.php"; //liefert lieferzeit zurück
                         <div class="col-xs-3">
 
                             <a href="./index.php?page=checkoutUI">
-                                <button  type="button" class="btn btn-primary btn-sm btn-block">
+                                <button type="button" class="btn btn-primary btn-sm btn-block">
                                     <span class="glyphicon glyphicon-euro"></span> checkout
 
                                 </button>

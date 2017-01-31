@@ -1,12 +1,12 @@
 <?php
 $servername = "localhost";
-$username = "G10";
-$password = "wa78g";
+$username = "root";
+$password = "MyNewPass";
 $dbname = "g10";
 $check = false;
 
-$conn = mysqli_connect($servername, $username, $password, $dbname);
-MYSQLI_SET_CHARSET($conn, 'utf8');
+
+$conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password, [PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES utf8"]);
 
 
 ?>
