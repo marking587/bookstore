@@ -74,8 +74,8 @@ $('document').ready(function () {
                 if (response == "ok") {
                     //                    $("#btn-regist").html('<img class="load_img" src="./img/btn-ajax-loader.gif" /> &nbsp; Signing In ...');
                     $("#error2").html('<div class="alert alert-success"> <span class="glyphicon glyphicon-info-sign"></span> &nbsp; Registrierung erfolgreich!</div>');
-                    setTimeout(' window.location.href = "./index.php?Page=loginUI"; ', 4000);
-                    //                    window.location.href = "./home.php";
+                    //setTimeout(' window.location.href = "./index.php?Page=loginUI"; ', 4000);
+                                        window.location.href = "./index.php";
                 }
                 else {
                     $("#error2").fadeIn(1000, function () {

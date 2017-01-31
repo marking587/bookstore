@@ -26,11 +26,14 @@ include_once './api/books.php';
     <script src="http://code.jquery.com/jquery-latest.js"></script>
     <script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.15.0/jquery.validate.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
 
 
+    <script src="./js/angular.js"></script>
     <script src="./js/bookUI.js"></script>
     <script src="./js/loginUI.js"></script>
     <script src="./js/login_register.js"></script>
+
 </head>
 <body>
 
@@ -58,7 +61,10 @@ include_once './api/books.php';
                 <li><a href="https://radiant-tor-87998.herokuapp.com">NodeJS</a></li>
                 <li><a href="http://141.56.131.108/ewa/g10/wordpress">WordPress</a></li>
             </ul>
+
+
             <ul class="nav navbar-nav navbar-right">
+
 
                 <?php
 
@@ -76,15 +82,28 @@ include_once './api/books.php';
         </div>
     </div>
 </nav>
-<div id= "seite_anzeigen" class="container">
+<div id="seite_anzeigen" class="container">
+    <?php if(isset($_GET["page"]) != "angular"){ ?>
+
+
+        <div ng-controller="myController" ng-app="myApp" id="search" class="container">
+            <input type="text" ng-model="book" ng-change="callBook(book)"  placeholder="Search" />
+            <div class="wellness">
+                <ul>
+                    <li ng-repeat="rs in resultSearch track by $index">
+                        <a href="#" ng-click="chooseBook(rs.ProductID)">
+                            <span ng-bind="rs.Produkttitel" ></span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    <?php } ?>
+
     <?php
     include (isset ($_GET["page"]) ? $_GET["page"] : "defaultUI") . ".php";
-    if(isset($_SESSION['userid']) == '') {
-
-
-    }
-
     ?>
+
 </div>
 
 

@@ -27,7 +27,7 @@ if (isset($_POST['login-submit'])) {
 
         } else
         {
-            echo "FICK DICH!! Du kommst hier nicht rein!";
+            echo "Du kommst hier nicht rein!";
         }
 
 }
