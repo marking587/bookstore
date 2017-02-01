@@ -27,11 +27,20 @@
 
                                                     if (isset($_SESSION['cart']) && is_array($_SESSION['cart']) ) {
                                                     $total = 0;
+                                                    $array = [];
+                                                    $i = 0;
                                                     foreach ($_SESSION['cart'] as $productID => $amount) {
                                                     foreach ($books as $book) {
                                                     if (intval($book['ProductID']) === intval($productID)) {
+                                                        $i = $i + 1;
+                                                       $array[$i]['productcode'] =  $book['Produktcode'];
+                                                       $array[$i]['amount'] = $amount;
 
-
+                                                       /* positions" => array(
+                                                        "OrderPosition" => array(
+                                                                   array("ISBN" => "123456789X", "Quantity" => 3),
+                                                                    array("ISBN" => "456457456X", "Quantity" => 1)
+                                                   )*/
 
 
                                                     ?>
@@ -56,6 +65,7 @@
                                                             </td>
                                                         </tr>
                                                         <?php
+
                                                         }
                                                         }
 
@@ -71,9 +81,7 @@
 
                                                 $customer = $_SESSION["username"];
                                                 $totalPrice = $total;
-                                                $positions = $_SESSION["cart"];
-
-                                                DoNewOrder( $customer, $totalPrice, $positions);
+                                                DoNewOrder( $customer, $totalPrice, $array);
                                                 ?>
                                                 <div class="col-md-3">
                                                     <div style="text-align: right; padding-right: 8px">

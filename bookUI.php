@@ -1,6 +1,7 @@
 <?php
 
 $productID = $_GET["ProductID"];
+//$productcode = $_GET["Produktcode"];
 ?>
 
 <div class="container">
@@ -21,6 +22,7 @@ $productID = $_GET["ProductID"];
                 <h5>Preis: <span class="itemPrice"><?php echo $book['PreisBrutto'] ?> €</span></h5>
                 <?php $bestand = $book['Lagerbestand'] ?>
             </div>
+            <?php $productcode = $book['Produktcode'] ?>
 
         <?php }
     }
@@ -34,6 +36,7 @@ $productID = $_GET["ProductID"];
                     class="glyphicon glyphicon-shopping-cart"></span> Add to Cart
             </button>
             <input type="hidden" name="cartItemAdded" id="cartItemAdded" value='<?php echo $productID; ?>'>
+            <input type="hidden" name="Produktcode" id="Produktcode" value='<?php echo $productcode; ?>'>
         </form>
     <?php } else { ?>
         <a href="index.php?page=loginUI">

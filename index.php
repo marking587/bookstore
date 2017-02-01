@@ -76,6 +76,7 @@ include_once './api/books.php';
 
                 if(isset($_SESSION['userid']) != '') {
                 ?>
+                    <li><a href="index.php?page=admin">Admin</a></li>
                     <li><a href="index.php?page=accountUI"><span class="glyphicon glyphicon-user"></span> Your Account</a></li>
                 <?php }
                 elseif(!isset($_SESSION['userid'])){ ?>
