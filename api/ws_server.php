@@ -13,7 +13,7 @@
      return (0 == ($sum % 10));
  }
 
-  $options = array('uri' => 'http://141.56.131.108/ewa/G10/siggi/');
+  $options = array('uri' => 'http://141.56.131.108/ewa/G10/bookstore/');
 
   $SOAPServer = new SoapServer(null, $options);
 

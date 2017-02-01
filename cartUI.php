@@ -17,7 +17,7 @@ include_once "./soa/soa.php"; //liefert lieferzeit zurück
                                 <h5><span class="glyphicon glyphicon-shopping-cart"></span> Shopping Cart</h5>
                             </div>
                             <div class="col-xs-6">
-                                <a href="./index.php">
+                                <a href="index.php">
                                     <button type="button" class="btn btn-primary btn-sm btn-block">
                                         <span class="glyphicon glyphicon-share-alt"></span> Continue shopping
 
@@ -57,12 +57,12 @@ include_once "./soa/soa.php"; //liefert lieferzeit zurück
                                         </div>
                                         <div class="col-xs-6">
                                             <div class="col-xs-6 text-right">
-                                                <h6><strong><?php echo $book['PreisBrutto']; ?><span class="text-muted"> € x</span></strong>
+                                                <h6><strong><?php echo $book['PreisBrutto']; ?><span> € </span></strong>
                                                 </h6>
 
                                             </div>
-                                            <div class="col-xs-4">
-                                                <span> x <?php echo $amount ?></span>
+                                            <div class="col-xs-4 text-right">
+                                                <strong><span> x <?php echo $amount ?></span></strong>
                                             </div>
                                             <div class="col-xs-2">
                                                 <!--                                        TODO: remove items-->
@@ -78,9 +78,9 @@ include_once "./soa/soa.php"; //liefert lieferzeit zurück
 
                                         </div>
                                         <div>
-                                            <h6 class="text-right"><strong>Gesamt: <?php echo $price; ?> € </strong>
+                                            <h6 class="text-right"><strong style="padding-right: 89px;">Gesamt: <?php echo $price; ?> € </strong>
                                             </h6>
-                                            <h6 class="text-right"><strong>erwartete
+                                            <h6 class="text-right"><strong style="border-right-width: 9px; padding-right: 89px; ">erwartete
                                                     Lieferzeit: <?= GetDeliveryTime($isbn); ?> Tage </strong></h6>
                                         </div>
                                     </div>
@@ -115,7 +115,7 @@ include_once "./soa/soa.php"; //liefert lieferzeit zurück
                         </div>
                         <div class="col-xs-3">
 
-                            <a href="./index.php?page=checkoutUI">
+                            <a href="index.php?page=checkoutUI">
                                 <button type="button" class="btn btn-primary btn-sm btn-block">
                                     <span class="glyphicon glyphicon-euro"></span> checkout
 

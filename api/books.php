@@ -7,15 +7,28 @@
  */
 
 // setting up PDO
-
+include_once "credentials.php";
 // prepare all queries...
-$dbBuecher = $conn->prepare("SELECT * FROM buecher");
+//$dbBuecher = $conn->prepare("SELECT * FROM buecher");
 
 // fetch all artists
-$dbBuecher->execute();
-$books=$dbBuecher->fetchAll(PDO::FETCH_ASSOC);
+//$dbBuecher->execute();
+//var_dump($dbBuecher);
+//$books=$dbBuecher->fetchAll(PDO::FETCH_ASSOC);
 
 
+
+if (mysqli_stat ($conn) === NULL)
+    die("Error: Keine Verbindung möglich!");
+
+$sql2="SELECT * FROM buecher ";
+$result = mysqli_query($conn,$sql2);
+
+for ($i = 0; $i < mysqli_num_rows($result) ; $i++) {
+    $row2[$i] = mysqli_fetch_assoc($result);
+}
+$books = $row2;
+//var_dump($books);
 $x=new XMLWriter();
 $x->openMemory();
 $x->startDocument('1.0','UTF-8');

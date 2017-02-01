@@ -2,7 +2,7 @@
 
     ?>
 
-    <h2>YOUR BILL</h2>
+    <h2>YOUR INVOICE</h2>
 
     <label> Name: <?php echo $_SESSION['bill']['lastName']; ?> </label><br>
     <label> Vorname: <?php echo $_SESSION['bill']['firstName']; ?> </label><br>

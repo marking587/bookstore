@@ -27,13 +27,14 @@ include_once './api/books.php';
     <script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.15.0/jquery.validate.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+    <link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
 
 
-    <script src="./js/angular.js"></script>
-    <script src="./js/bookUI.js"></script>
-    <script src="./js/loginUI.js"></script>
-    <script src="./js/login_register.js"></script>
-    <script src="./js/bill.js"></script>
+    <script src="js/angular.js"></script>
+    <script src="js/bookUI.js"></script>
+    <script src="js/loginUI.js"></script>
+    <script src="js/login_register.js"></script>
+    <script src="js/bill.js"></script>
 
 </head>
 <body>
@@ -60,6 +61,7 @@ include_once './api/books.php';
                 <li class="active"><a href="index.php">Home</a></li>
                 <li><a href="index.php?page=angular">Angular</a></li>
                 <li><a href="https://radiant-tor-87998.herokuapp.com">NodeJS</a></li>
+                <li><a href="http://141.56.131.108/ewa/g10/wordpress">WordPress</a></li>
                 <li><a href="http://141.56.131.108/ewa/g10/wordpress">WordPress</a></li>
             </ul>
 

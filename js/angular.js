@@ -11,7 +11,7 @@
                     name: book
                 }
             }).success(function (data) {
-                console.log(data);
+
                 $scope.resultSearch = data;
             });
         };

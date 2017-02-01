@@ -1,8 +1,8 @@
 <?php
 session_start();
 $nummer = $_POST["KreditkartenNummer"];
-  $options = array( 'location' => 'http://141.56.131.108/ewa/g10/siggi/ws_server.php',
-  'uri'=>'http://141.56.131.108/ewa/g10/siggi/');
+  $options = array( 'location' => 'http://141.56.131.108/ewa/g10/bookstore/api/ws_server.php',
+  'uri'=>'http://141.56.131.108/ewa/g10/bookstore/');
 
 	 $SOAPClient = new SoapClient(null, $options);
 

@@ -33,7 +33,7 @@ $productID = $_GET["ProductID"];
             <input type="hidden" name="cartItemAdded" id="cartItemAdded" value='<?php echo $productID; ?>'>
         </form>
     <?php } else { ?>
-        <a href="./index.php?page=loginUI"><button type="submit" class="btn btn-lg btn-add-to-cart"> Log in
+        <a href="index.php?page=loginUI"><button type="submit" class="btn btn-lg btn-add-to-cart"> Log in
             </button></a>
 
     <?php } ?>
