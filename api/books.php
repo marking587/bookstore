@@ -59,3 +59,4 @@ $xml = $x->outputMemory();
 
 $xml = utf8_encode($xml);
 $xml = simplexml_load_string($xml);
+
