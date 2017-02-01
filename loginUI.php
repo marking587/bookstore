@@ -10,7 +10,7 @@
                             <a href="#" class="active" id="login-form-link">Login</a>
                         </div>
                         <div class="col-xs-6" >
-                            <a href="index.php?page=registerUI" >Register</a>
+                            <a href="./index.php?page=registerUI" >Register</a>
                             <!--a href="./index.php?page=registerUI" id="register-form-link">Register</a-->
                         </div>
                     </div>

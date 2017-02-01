@@ -34,7 +34,7 @@ $('document').ready(function () {
                 if (response == "ok") {
                     $("#login_form").html('<img class="load_img" src="./img/btn-ajax-loader.gif" /> &nbsp; Signing In ...');
                     //						setTimeout(' window.location.href = "./home.php"; ',4000);
-                    window.location.href = "../index.php";
+                    window.location.href = "./index.php";
                 }
                 else {
                     $("#error").fadeIn(1000, function () {
@@ -76,13 +76,14 @@ $('document').ready(function () {
                     //                    $("#btn-regist").html('<img class="load_img" src="./img/btn-ajax-loader.gif" /> &nbsp; Signing In ...');
                     $("#error2").html('<div class="alert alert-success"> <span class="glyphicon glyphicon-info-sign"></span> &nbsp; Registrierung erfolgreich!</div>');
                     //setTimeout(' window.location.href = "./index.php?Page=loginUI"; ', 4000);
-                                        window.location.href = "../index.php";
+                                        window.location.href = "./index.php";
                 }
                 else {
                     $("#error2").fadeIn(1000, function () {
                         $("#error2").html('<div class="alert alert-danger"> <span class="glyphicon glyphicon-info-sign"></span> &nbsp; ' + response + ' !</div>');
                         //                        $("#btn-regist").html('<span class="glyphicon glyphicon-log-in"></span> &nbsp; Sign In');
                     });
+
                 }
             }
         });

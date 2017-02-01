@@ -49,11 +49,11 @@ include_once './api/books.php';
 <nav class="navbar navbar-inverse">
     <div class="container-fluid">
         <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+            <!--button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
-            </button>
+            </button-->
             <span class="navbar-brand" >G10</span>
         </div>
         <div class="collapse navbar-collapse" id="myNavbar">
@@ -62,7 +62,7 @@ include_once './api/books.php';
                 <li><a href="index.php?page=angular">Angular</a></li>
                 <li><a href="https://radiant-tor-87998.herokuapp.com">NodeJS</a></li>
                 <li><a href="http://141.56.131.108/ewa/g10/wordpress">WordPress</a></li>
-                <li><a href="http://141.56.131.108/ewa/g10/wordpress">WordPress</a></li>
+                <li><a href="http://wave.webaim.org/report#/http://141.56.131.108/ewa/g10/bookstore/index.php">Webaim</a></li>
             </ul>
 
 
