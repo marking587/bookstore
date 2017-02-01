@@ -24,11 +24,15 @@
                                             <div class="items">
                                                 <div class="col-md-9">
                                                     <?php
+
                                                     if (isset($_SESSION['cart']) && is_array($_SESSION['cart']) ) {
                                                     $total = 0;
                                                     foreach ($_SESSION['cart'] as $productID => $amount) {
                                                     foreach ($books as $book) {
                                                     if (intval($book['ProductID']) === intval($productID)) {
+
+
+
 
                                                     ?>
                                                     <table class="table table-striped">
@@ -54,6 +58,7 @@
                                                         <?php
                                                         }
                                                         }
+
                                                         }} else {
                                                             //TODO: das muss noch angezeigt werden , siehe if Bedingung
                                                             echo '<span> Nothing to order.</span>';
@@ -61,6 +66,15 @@
                                                         ?>
                                                     </table>
                                                 </div>
+                                                <?php
+                                                include_once "../soa/soa_client.php";
+
+                                                $customer = $_SESSION["username"];
+                                                $totalPrice = $total;
+                                                $positions = $_SESSION["cart"];
+
+                                                DoNewOrder( $customer, $totalPrice, $positions);
+                                                ?>
                                                 <div class="col-md-3">
                                                     <div style="text-align: right; padding-right: 8px">
                                                         <h3>Total</h3>

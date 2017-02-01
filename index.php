@@ -63,6 +63,7 @@ include_once './api/books.php';
                 <li><a href="https://radiant-tor-87998.herokuapp.com">NodeJS</a></li>
                 <li><a href="http://141.56.131.108/ewa/g10/wordpress">WordPress</a></li>
                 <li><a href="http://wave.webaim.org/report#/http://141.56.131.108/ewa/g10/bookstore/index.php">Webaim</a></li>
+                <li><a href="index.php?page=xml">XML</a></li>
             </ul>
 
 
