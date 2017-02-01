@@ -35,6 +35,8 @@ include_once './api/books.php';
     <script src="js/loginUI.js"></script>
     <script src="js/login_register.js"></script>
     <script src="js/bill.js"></script>
+    <script src="js/barrierefrei.js"></script>
+    <script src="js/moreInformation.js"></script>
 
 </head>
 <body>
@@ -113,6 +115,11 @@ include_once './api/books.php';
 
 
 <footer class="container-fluid text-center">
+    <div id="controls">
+        <a href="#" id="small">A</a>
+        <a href="#" id="medium" class="selected">A</a>
+        <a href="#" id="large">A</a>
+    </div>
     <p>by R. Kestel & M.S. Däbritz</p>
 </footer>
 

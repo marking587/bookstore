@@ -1,7 +1,7 @@
 <?php
 $servername = "localhost";
-$username = "G10";
-$password = "wa78g";
+$username = "root";
+$password = "MyNewPass";
 $dbname = "g10";
 $check = false;
 
